@@ -1,3 +1,4 @@
+let g:auto_session_enabled = v:false
 " let g:vim_kata_shuffle = 1
 " let g:vim_kata_katas_dir = 'katas'
 " let g:vim_kata_diff_on = 1
