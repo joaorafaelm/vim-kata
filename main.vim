@@ -57,6 +57,7 @@ function! LoadKatas()
 endfunction
 
 function! KataNext()
+    w!
     if s:current_kata >= len(s:kata_pairs) - 1
         echo 'Already at last kata'
         return
@@ -66,6 +67,7 @@ function! KataNext()
 endfunction
 
 function! KataPrevious()
+    w!
     if s:current_kata <= 0
         echo 'Already at first kata'
         return
@@ -128,11 +130,12 @@ endfunction
 
 function! CreateWorkKata(conf)
     let file_in_content = readfile(a:conf.in)
-    let file_out_content = readfile(a:conf.out)
+    let file_out_content = readfile(a:conf.out) 
+    let tips = readfile(a:conf.tips) 
     let file_in = tempname() . '.' . a:conf.dir . '.in.' . a:conf.ext
     let file_out = tempname() . '.' . a:conf.dir .'.out.' . a:conf.ext
-    call writefile(file_in_content, file_in)
-    call writefile(file_out_content, file_out)
+    call writefile(tips + file_in_content, file_in)
+    call writefile(tips + file_out_content, file_out)
     return [file_in, file_out]
 endfunction
 
