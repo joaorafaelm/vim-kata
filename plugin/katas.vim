@@ -125,7 +125,7 @@ function! LoadCurrentKata()
     silent only
     execute 'edit '.item_in
     setlocal nolist
-    setlocal foldlevel=9999
+    setlocal nofoldenable
     " place a literal ^K somewhere in the 'in' document to specify
     " a custom cursor start location
     let line_number = search('\%x0b')
@@ -142,7 +142,7 @@ function! LoadCurrentKata()
         let split_command = g:vim_kata_split_command
     endif
     execute split_command.' '.item_out
-    setlocal foldlevel=9999
+    setlocal nofoldenable
     setlocal nolist
     setlocal nomodifiable
     if diff_on
