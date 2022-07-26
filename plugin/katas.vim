@@ -20,7 +20,7 @@ let s:start_katas = '<C-L>'
 let s:next_kata_mapping = '<C-K>'
 let s:previous_kata_mapping = '<C-J>'
 let s:goto_kata_mapping = '<C-G>'
-let g:vim_kata_katas_dir =  expand('<sfile>:p:h') . 'katas'
+let g:vim_kata_katas_dir =  expand('<sfile>:p:h') . '/katas'
 if exists('g:vim_kata_next_kata_mapping')
     let s:next_kata_mapping = g:vim_kata_next_kata_mapping
 endif
