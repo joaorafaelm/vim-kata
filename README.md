@@ -1,56 +1,29 @@
 # vim-kata
 
-A vimscript to help you improve your Vim muscle memory.
-
-## Description
-
-I wrote `vim-kata` to help me improve my Vim skills, I'm hoping it will do the same for others.
-
-It is basically a scripted version of [Vim-Katas](https://github.com/adomokos/Vim-Katas)
-which in turn is heavily inspired by and mostly extracted from
-[Practical Vim](https://pragprog.com/book/dnvim/practical-vim).
-
-In addition to taking some of the katas directly from Vim Katas, I also borrowed extensively from
-[VimGolf](https://www.vimgolf.com/) and added a few of my own.
-
-The katas in this repo are not meant to be hard to solve. Quite the opposite. For each, there are usually
-several techniques that can be employed to simplify the task greatly. I believe that going over them
-frequently can help build muscle memory.
-
-I intend on adding a new kata every time I run into some new trick.
-
-Contributions of new katas and fixes/improvements to the script are most welcome!
+A vim plugin to help you improve your Vim muscle memory.
 
 ## Demo
 
 ![Screencast](https://github.com/dankilman/vim-kata/raw/master/doc/demo.gif)
 
-## Requirements
-
-I'm using neovim on macOS but I don't think I'm using anything neovim specific or very new features.
-
-That being said, the script may need some fixes to work in different setups.
-
-Specifically, windows is not supported but I'll gladly accept PRs that add windows support.
-
 ## Usage
 
-* Clone this repo.
-* from terminal, `cd` into repo directory.
-* from terminal, run `./run.sh`
+Install this plugin with any plugin manager.
 
-After `vim-kata` is loaded, the first kata should appear (first being the first in the newly shuffled order).
+Start the plugin with `<C-L>`.
+After `vim-kata` is loaded, the first kata should appear in a new tab (first being the first in the newly shuffled order).
 
 `vim-kata` uses the Vim diff display mode.
 
-The upper window is the input text. This is where you edit the text.
+The left window is the input text. This is where you edit the text.
 
-The lower window is the output text. This is what your editing should look like. This buffer is `'unmodifiable'`.
+The right window is the output text. This is what your editing should look like. This buffer is `'unmodifiable'`.
 
 Once you are done with a kata:
 
-* `<C-J>` to load the next kata.
-* `<C-K>` to reload the previous kata.
+* `<C-L>` to start kata in a new tab.
+* `<C-J>` to load the previous kata.
+* `<C-K>` to reload the next kata.
 * `<C-G>` to load a specific kata by directory name (thanks [@oflisback](https://github.com/oflisback)).
 * `ZQ` to quit (mapped to `qa!`).
 
